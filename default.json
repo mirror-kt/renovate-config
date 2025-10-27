@@ -3,7 +3,8 @@
     "extends": [
         "config:base",
         ":timezone(Asia/Tokyo)",
-        "group:monorepos"
+        "group:monorepos",
+        "helpers:pinGitHubActionDigests"
     ],
     "dockerfile": {
         "fileMatch": [
