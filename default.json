@@ -33,6 +33,8 @@
         "dependencies"
     ],
     "minimumReleaseAge": "7 days",
+    "prCreation": "not-pending",
+    "internalChecksFilter": "strict",
     "prHourlyLimit": 0,
     "prConcurrentLimit": 0
 }
