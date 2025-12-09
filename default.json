@@ -32,6 +32,7 @@
     "labels": [
         "dependencies"
     ],
+    "configMigration": true,
     "minimumReleaseAge": "7 days",
     "prCreation": "not-pending",
     "internalChecksFilter": "strict",

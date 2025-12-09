@@ -1,0 +1,12 @@
+name: renovate config
+on: pull_request
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - name: validation
+        run: npx --yes --package renovate -- renovate-config-validator renovate.json default.json
