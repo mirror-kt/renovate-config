@@ -1,14 +1,14 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
-        "config:base",
+        "config:recommended",
         ":timezone(Asia/Tokyo)",
         "group:monorepos",
         "helpers:pinGitHubActionDigests"
     ],
     "dockerfile": {
-        "fileMatch": [
-            "^(?:.*\\.)?Dockerfile$"
+        "managerFilePatterns": [
+            "/^(?:.*\\.)?Dockerfile$/"
         ]
     },
     "packageRules": [
@@ -23,7 +23,7 @@
     "lockFileMaintenance": {
         "enabled": true,
         "recreateWhen": "always",
-        "rebaseStalePrs": true,
+        "rebaseWhen": "behind-base-branch",
         "schedule": [
             "before 4am on monday"
         ]
